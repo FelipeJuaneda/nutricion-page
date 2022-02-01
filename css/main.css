@@ -56,7 +56,7 @@ header nav{
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } 
-
+/* Botones y Hovers */
 button {
     border: none;
     display: block;
@@ -94,7 +94,7 @@ button span::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-60deg);
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 button:hover span::before {
@@ -123,9 +123,17 @@ button:active span::before {
     transition: .5s;
 }
 @media screen and (max-width:1024px){
+    .contenedor-img{
+        justify-content: center;
+    }
     .contenedor-img .logo{
         width: 18vh;
         border-radius: 3px;
+    }
+}
+@media screen and (max-width:988px){
+    .lista-nav{
+        width: 63%;
     }
 }
 @media screen and (max-width:768px){
@@ -143,7 +151,7 @@ button:active span::before {
         position: absolute;
         right: 0;
         height: 92vh;
-        top: 14vh;
+        top: 13.2vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -154,6 +162,11 @@ button:active span::before {
     }
     .burger{
         display: block;
+    }
+}
+@media screen and (max-width:500px){
+    .lista-nav{
+        width: 70%;
     }
 }
 .nav-activo{
@@ -188,7 +201,7 @@ body{
 @media screen and (max-width:958px){
     .nubes{
         background-size: auto;
-        height: 820px;
+        height: 600px;
     }
 }
 @media screen and (max-width:768px){
@@ -251,7 +264,7 @@ body{
 }
 @media screen and (max-width:768px){
     .contenedor-main{
-        width: 65%;
+        width: 75%;
         flex-direction: column-reverse;
     }
     .contenedor-main .contenedor-img{
@@ -272,4 +285,13 @@ body{
         margin-bottom: 15px;
     }
 }
-
+@media screen and (max-width:425px){
+    .contenedor-main{
+        width: 100%;
+    }
+}
+@media screen and (max-width:333px){
+    .contenedor-titulo{
+        margin-left: 20px;
+    }
+}
