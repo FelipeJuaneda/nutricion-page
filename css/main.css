@@ -207,7 +207,7 @@ body{
 @media screen and (max-width:768px){
     .nubes{
         background-size: auto;
-        height: 533px;
+        height: 765px;
     }
 }
 
@@ -268,9 +268,10 @@ body{
         flex-direction: column-reverse;
     }
     .contenedor-main .contenedor-img{
-        width: 100%;
-        margin-top: 160px;
-        display: none;
+        justify-content: start;
+    }
+    .contenedor-main .contenedor-img .diet-img{
+        padding-left: 20px;
     }
     .contenedor-titulo{
         margin-left: 45px;
@@ -289,9 +290,63 @@ body{
     .contenedor-main{
         width: 100%;
     }
-}
-@media screen and (max-width:333px){
     .contenedor-titulo{
         margin-left: 20px;
+    }
+}
+
+/* IMAGENES REDONDAS */
+
+.contenedor-redonda{
+    display: flex;
+    position: relative;
+    margin: auto;
+    top: 91vh;
+    width: 90%;
+}
+.contenedor-redonda .img-redonda1{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-redonda .img-redonda2{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-redonda .img-redonda3{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-redonda .img-redonda4{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-redonda img{
+    width: 65%;
+}
+
+@media screen and (max-width:959px){
+    .contenedor-redonda{
+        top: 86vh;
+    }
+}
+@media screen and (max-width:768px){
+    .contenedor-redonda{
+        top: 70vh;
+    }
+}
+@media screen and (max-width:425px){
+    .contenedor-redonda .img-redonda1{
+        justify-content: end;
+    }
+    .contenedor-redonda .img-redonda2{
+        justify-content: end;
+        padding-right: 10px;
+    }
+    .contenedor-redonda .img-redonda3{
+        justify-content: start;
+        padding-left: 10px;
+    }
+    .contenedor-redonda .img-redonda4{
+        justify-content: start;
     }
 }
