@@ -37,8 +37,7 @@ header nav{
     margin-bottom: 1.5px;
 }
 .contenedor-img .logo{
-    width: 20vh;
-    border-radius: 3px;
+    width: 35vh;
 }
 .lista-nav{
     display: flex;
@@ -71,6 +70,9 @@ button {
     z-index: 1;
     font-family: inherit;
     font-weight: 500;
+    -webkit-box-shadow: 7px 7px 35px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 35px -5px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 35px -5px rgba(0,0,0,0.75);
 }
 
 button span {
@@ -105,10 +107,16 @@ button:hover span::before {
 
 button:hover {
     color: white;
+    border: solid 1px white;
 }
 
 button:active span::before {
     background: var(--color-azul);
+}
+@media screen and (max-width:1027px){
+    button{
+        padding: 0.5em 2.4em;
+    }
 }
 /* Menu Hamburguesa */
 .burger{
@@ -127,7 +135,7 @@ button:active span::before {
         justify-content: center;
     }
     .contenedor-img .logo{
-        width: 18vh;
+        width: 27vh;
         border-radius: 3px;
     }
 }
@@ -144,7 +152,7 @@ button:active span::before {
         justify-content: space-evenly;
     }
     .contenedor-img .logo{
-        width: 16vh;
+        width: 20vh;
         border-radius: 3px;
     }
     .lista-nav{
@@ -191,17 +199,22 @@ body{
 }
 /* Nubes */
 .nubes{
-    background-image: url(../imagenes/nube.svg);
+    background-image: url(../imagenes/nube-alta.svg);
     width: 100%;
-    height: 672px;
+    height: 880px;
     background-size:contain;
     background-repeat: round;
     position: absolute;
 }
+@media screen and (max-width:1024px){
+    .nubes{
+        background-size: auto;
+        height: 670px;
+    }
+}
 @media screen and (max-width:958px){
     .nubes{
         background-size: auto;
-        height: 600px;
     }
 }
 @media screen and (max-width:768px){
@@ -220,12 +233,12 @@ body{
     top: 30vh;
 }
 .contenedor-main .contenedor-img{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 .contenedor-main .contenedor-img .diet-img{
-    width: 82%;
+    width: 100%;
 }
 .contenedor-titulo{
     display: grid;
@@ -233,33 +246,83 @@ body{
 .contenedor-titulo h1{
     display: flex;
     font-size: 3em;
-    padding-bottom: 20px;
     align-items: end;
+    justify-content: end;
     font-family: var(--font);
     color: var(--color-blanco);
 }
+.contenedor-titulo .subtitulo-apellido{
+    font-size: 48px;
+    
+    padding-bottom: 20px;
+    text-align: end;
+}
+
+.span-especialista{
+    display: flex;
+    align-items: end;
+    padding-top: 30px;
+
+}
+.span-especialista h2{
+    font-size: 40px;
+    color: black;
+}
+
+.span-clinica h3{
+    font-size: 30px;
+    color: white;
+}
+
 .contenedor-titulo .diet-parrafo{
+    padding-top: 25px;
+    color: rgb(212, 212, 50);
     font-size: 1.3em;
     font-family: var(--font);
     width: 80%;
     letter-spacing: .5px;
 }
 
-@media screen and (max-width:1112px){
-    .contenedor-titulo{
-        text-align: center;
-    }
-    .contenedor-titulo .diet-parrafo{
-        width: 100%;
-    }
-}
+
 @media screen and (max-width:1024px){
+    .contenedor-main{
+        top: 20vh;
+    }
     .contenedor-titulo h1{
-        display: inline-grid;
-        font-size: 2em;
+        font-size: 2.4em;
+    }
+    .contenedor-titulo .subtitulo-apellido{
+        font-size: 38.4px;
+    }
+    .contenedor-titulo .span-especialista h2{
+        font-size: 35px;
+    }
+    .contenedor-titulo .span-clinica h3{
+        font-size: 26px;
     }
     .contenedor-titulo .diet-parrafo{
         font-size: 1.2em;
+    }
+}
+@media screen and (max-width:970px){
+    .contenedor-main .contenedor-img{
+        width: 70rem;
+    }
+    .contenedor-titulo h1{
+        justify-content: start;
+    }
+    .contenedor-titulo .subtitulo-apellido{
+        text-align: start;
+    }
+    .span-especialista{
+        justify-content: end;
+    }
+    .contenedor-titulo .span-clinica h3{
+        text-align: end;
+    }
+    .contenedor-titulo .diet-parrafo{
+        width: 100%;
+        text-align: end;
     }
 }
 @media screen and (max-width:768px){
@@ -268,13 +331,14 @@ body{
         flex-direction: column-reverse;
     }
     .contenedor-main .contenedor-img{
-        justify-content: start;
+        justify-content: center;
+        width: 100%;
     }
     .contenedor-main .contenedor-img .diet-img{
-        padding-left: 20px;
+        width: 70%;
+        
     }
     .contenedor-titulo{
-        margin-left: 45px;
         text-align: start;
     }
     .contenedor-titulo h1{
@@ -286,14 +350,41 @@ body{
         margin-bottom: 15px;
     }
 }
-@media screen and (max-width:425px){
+@media screen and (max-width:643px){
     .contenedor-main{
         width: 100%;
     }
-    .contenedor-titulo{
-        margin-left: 20px;
+    .contenedor-titulo h1{
+        justify-content: center;
+    }
+    .contenedor-titulo .subtitulo-apellido{
+        text-align: center;
+    }
+    .span-especialista{
+        justify-content: center;
+    }
+    .contenedor-titulo .span-clinica h3{
+        text-align: center;
+    }
+    .contenedor-titulo .diet-parrafo{
+        text-align: center;
     }
 }
+@media screen and (max-width:558px){
+    .contenedor-titulo h1{
+        font-size: 27px;
+    }
+    .contenedor-titulo .subtitulo-apellido{
+        font-size: 33.4px;
+    }
+    .contenedor-titulo .span-especialista h2{
+        font-size: 26px;
+    }
+    .contenedor-titulo .span-clinica h3{
+        font-size: 22px;
+    }
+}
+
 
 /* IMAGENES REDONDAS */
 
@@ -323,18 +414,28 @@ body{
 .contenedor-redonda img{
     width: 65%;
 }
-
+@media screen and (max-width:1024px){
+    .contenedor-redonda{
+        top: 69vh;
+    }
+}
 @media screen and (max-width:959px){
     .contenedor-redonda{
-        top: 86vh;
+        top: 60vh;
     }
 }
 @media screen and (max-width:768px){
     .contenedor-redonda{
-        top: 70vh;
+        top: 53vh;
+        width: 73%;
     }
 }
+
 @media screen and (max-width:425px){
+    .contenedor-redonda{
+        width: 63%;
+        top: 63vh;
+    }
     .contenedor-redonda .img-redonda1{
         justify-content: end;
     }
@@ -349,4 +450,37 @@ body{
     .contenedor-redonda .img-redonda4{
         justify-content: start;
     }
+}
+
+/* Contenedor Balanza */
+.contenedor-balanza{
+    position: relative;
+    top: 110vh;
+    display: flex;
+    margin: auto;
+    width: 80%;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    border-radius: 5px;
+}
+
+.contenedor-pbal{
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+
+.contenedor-pbal p{
+    padding:0 0 0 50px;
+}
+
+.img-balanza{
+    width: 100%;
+}
+
+
+.img-balanza img{
+    width: 100%;
 }
