@@ -23,12 +23,13 @@ header nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    /* min-height: 8vh; */
     background-color:var(--color-azul);
     position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;
+    height: 87px;
 }
 .contenedor-img{
     display: flex;
@@ -466,6 +467,7 @@ body{
     font-size: 1.3em;
     letter-spacing: 1px;
     line-height: 40px;
+
 }
 
 .contenedor-pbal p{
@@ -522,5 +524,15 @@ body{
     .contenedor-pbal p{
         width: 100vh;
         padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:551px){
+
+    .img-balanza img{
+        width: 40%;
+    }
+    .contenedor-pbal{
+        font-size: 15px;
     }
 }
