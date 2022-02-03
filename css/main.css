@@ -159,7 +159,7 @@ button:active span::before {
         position: absolute;
         right: 0;
         height: 92vh;
-        top: 13.2vh;
+        top: 9vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -392,7 +392,7 @@ body{
     display: flex;
     position: relative;
     margin: auto;
-    top: 91vh;
+    top: 94vh;
     width: 90%;
 }
 .contenedor-redonda .img-redonda1{
@@ -416,17 +416,13 @@ body{
 }
 @media screen and (max-width:1024px){
     .contenedor-redonda{
-        top: 69vh;
+        top: 70vh;
     }
 }
-@media screen and (max-width:959px){
-    .contenedor-redonda{
-        top: 60vh;
-    }
-}
+
 @media screen and (max-width:768px){
     .contenedor-redonda{
-        top: 53vh;
+        top: 44vh;
         width: 73%;
     }
 }
@@ -434,7 +430,7 @@ body{
 @media screen and (max-width:425px){
     .contenedor-redonda{
         width: 63%;
-        top: 63vh;
+        top: 53vh;
     }
     .contenedor-redonda .img-redonda1{
         justify-content: end;
@@ -480,7 +476,51 @@ body{
     width: 100%;
 }
 
-
 .img-balanza img{
     width: 100%;
+}
+
+@media screen and (max-width:1163px){
+    .contenedor-pbal{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width:1024px){
+    .contenedor-balanza{
+        top: 90vh;
+    }
+    .contenedor-pbal{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:956px){
+    .contenedor-balanza{
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    .contenedor-balanza{
+        flex-direction: column-reverse;
+        top: 63vh;
+    }
+    .img-balanza{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .img-balanza img{
+        width: 30%;
+    }
+    .contenedor-pbal{
+        font-size: .9em;
+        line-height: 27px;
+        letter-spacing: .7px;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .contenedor-pbal p{
+        width: 100vh;
+        padding: 10px 0;
+    }
 }
