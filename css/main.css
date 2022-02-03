@@ -194,10 +194,6 @@ button:active span::before {
 }
 
 
-/* Body Main */
-body{
-    height: 200vh;
-}
 /* Nubes */
 .nubes{
     background-image: url(../imagenes/nube-alta.svg);
@@ -535,4 +531,17 @@ body{
     .contenedor-pbal{
         font-size: 15px;
     }
+}
+@media screen and (max-width:425px){
+    .contenedor-pbal{
+        font-size: 13px;
+    }
+}
+
+/* FOOTER */
+footer{
+    height: 50vh;
+    position: relative;
+    top: 129vh;
+    
 }
