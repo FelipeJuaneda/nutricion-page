@@ -420,13 +420,13 @@ button:active span::before {
 @media screen and (max-width:768px){
     .contenedor-redonda{
         top: 44vh;
-        width: 73%;
+        width: 83%;
     }
 }
 
 @media screen and (max-width:425px){
     .contenedor-redonda{
-        width: 63%;
+        width: 92%;
         top: 53vh;
     }
     .contenedor-redonda .img-redonda1{
@@ -541,7 +541,58 @@ button:active span::before {
 /* FOOTER */
 footer{
     height: 50vh;
+    width: 100%;
     position: relative;
     top: 129vh;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagenes/fondo-footer.png);
+    background-size: contain;
+}
+.contenedor-footer{
+    margin-top: 60px;
+}
+.img-footer{
+    display: flex;
+    justify-content: center;
+}
+.img-footer .logo-footer img{
+    width: 35vh;
+    margin-top: 20px;
+}
+.contenedor-footer .redes-footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.contenedor-footer .redes-footer a{
+    text-decoration: none;
+}
+.contenedor-footer .redes-footer .iconos-redes{
+    font-size: 30px;
+    background: var(--color-blanco);
+    width: 45px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-negro);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.contenedor-footer .redes-footer .fa-facebook:hover{
+    color: var(--color-blanco);
+    background-color: var(--color-azul);
+}
+
+.contenedor-footer .redes-footer .fa-whatsapp:hover{
+    color: var(--color-blanco);
+    background-color: #00bb2d;
+}
+.contenedor-footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    color: var(--color-blanco);
 }
