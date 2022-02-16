@@ -237,14 +237,14 @@ button:active span::before {
 .social-bar a{
     text-decoration: none;
 }
-.fab{
+.lat{
     color: var(--color-blanco);
     text-decoration: none;
     padding: .7rem;
     display: flex;
     transition: all .5s;
 }
-.fab:hover{
+.lat:hover{
     padding-right: 3rem;
     border-radius: 1rem 0 0 1rem;
     box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
