@@ -177,7 +177,7 @@ button:active span::before {
 @media screen and (max-width:500px){
     .lista-nav{
         width: 70%;
-        top: 11vh;
+        top: 9vh;
     }
 }
 .nav-activo{
