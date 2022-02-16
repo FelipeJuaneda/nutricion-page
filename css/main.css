@@ -177,7 +177,7 @@ button:active span::before {
 @media screen and (max-width:500px){
     .lista-nav{
         width: 70%;
-        top: 15vh;
+        top: 11vh;
     }
 }
 .nav-activo{
@@ -264,13 +264,13 @@ button:active span::before {
 
 @media screen and (max-width:768px){
     .fa-facebook-f{
-        width: 37px;
+        width: 42px;
     }
     .fa-whatsapp{
-        width: 37px;
+        width: 42px;
     }
     .fa-instagram{
-        width: 37px;
+        width: 42px;
     }
 }
 
