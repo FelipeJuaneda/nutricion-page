@@ -624,6 +624,9 @@ button:active span::before {
     .contenedor-iframes{
         top: 62vh;
     }
+    .iframeDos .iframe-dos iframe{
+        height: 320px;
+    }
 }
 @media screen and (max-width:522px){
     .iframeUno iframe{
