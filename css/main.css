@@ -630,9 +630,6 @@ button:active span::before {
         width: 70vh;
         height: 745px;
     }
-    .iframeTres iframe{
-        height: 66vh;
-    }
 }
 
 /* FOOTER */
