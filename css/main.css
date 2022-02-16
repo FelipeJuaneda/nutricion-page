@@ -596,3 +596,20 @@ footer{
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     color: var(--color-blanco);
 }
+
+@media screen and (max-width:768px){
+    footer{
+        background-size: cover;
+    }
+    .img-footer .logo-footer img{
+        width: 27vh;
+    }
+    .contenedor-footer .redes-footer{
+        margin-top: 12px;
+    }
+    .contenedor-footer .redes-footer .iconos-redes{
+        font-size: 22px;
+        width: 42px;
+        height: 30px;
+    }
+}
