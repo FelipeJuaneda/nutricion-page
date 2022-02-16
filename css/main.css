@@ -511,7 +511,6 @@ button:active span::before {
     -moz-box-shadow: 12px 13px 36px -2px rgba(0,0,0,0.59);
     box-shadow: 12px 13px 36px -2px rgba(0,0,0,0.59);
 }
-
 .contenedor-pbal{
     font-family: var(--font);
     display: flex;
@@ -519,21 +518,16 @@ button:active span::before {
     font-size: 1.3em;
     letter-spacing: 1px;
     line-height: 40px;
-
 }
-
 .contenedor-pbal p{
     padding:0 0 0 50px;
 }
-
 .img-balanza{
     width: 100%;
 }
-
 .img-balanza img{
     width: 100%;
 }
-
 @media screen and (max-width:1163px){
     .contenedor-pbal{
         font-size: 1.2em;
@@ -580,7 +574,6 @@ button:active span::before {
 }
 
 @media screen and (max-width:551px){
-
     .img-balanza img{
         width: 40%;
     }
@@ -602,8 +595,6 @@ button:active span::before {
     display: flex;
     justify-content: space-around;
 }
-
-
 @media screen and (max-width:1024px){
     .contenedor-iframes{
         top: 90vh;
