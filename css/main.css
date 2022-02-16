@@ -427,7 +427,7 @@ button:active span::before {
 @media screen and (max-width:425px){
     .contenedor-redonda{
         width: 92%;
-        top: 53vh;
+        top: 48vh;
     }
     .contenedor-redonda .img-redonda1{
         justify-content: end;
