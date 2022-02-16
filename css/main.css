@@ -176,6 +176,7 @@ button:active span::before {
 @media screen and (max-width:500px){
     .lista-nav{
         width: 70%;
+        top: 15vh;
     }
 }
 .nav-activo{
@@ -454,6 +455,9 @@ button:active span::before {
     width: 80%;
     background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
     border-radius: 5px;
+    -webkit-box-shadow: 12px 13px 36px -2px rgba(0,0,0,0.59);
+    -moz-box-shadow: 12px 13px 36px -2px rgba(0,0,0,0.59);
+    box-shadow: 12px 13px 36px -2px rgba(0,0,0,0.59);
 }
 
 .contenedor-pbal{
@@ -538,6 +542,56 @@ button:active span::before {
     }
 }
 
+/* Iframes */
+.contenedor-iframes{
+    position: relative;
+    top: 120vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media screen and (max-width:1024px){
+    .contenedor-iframes{
+        top: 100vh;
+        flex-direction: column;
+    }
+    .iframeUno{
+        display: flex;
+        justify-content: center;
+    }
+    .iframeDos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .iframeDos .iframe-dos{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .iframeTres{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:768px){
+    .contenedor-iframes{
+        top: 73vh;
+    }
+}
+@media screen and (max-width:522px){
+    .iframeUno iframe{
+        width: 70vh;
+        height: 745px;
+    }
+    .iframeTres iframe{
+        height: 66vh;
+    }
+}
+
 /* FOOTER */
 footer{
     height: 50vh;
@@ -611,5 +665,15 @@ footer{
         font-size: 22px;
         width: 42px;
         height: 30px;
+    }
+}
+@media screen and (max-width:1024px){
+    footer{
+        top: 105vh;
+    }
+}
+@media screen and (max-width:768px){
+    footer{
+        top: 80vh;
     }
 }
