@@ -449,7 +449,7 @@ button:active span::before {
 /* Contenedor Balanza */
 .contenedor-balanza{
     position: relative;
-    top: 110vh;
+    top: 102vh;
     display: flex;
     margin: auto;
     width: 80%;
@@ -489,7 +489,7 @@ button:active span::before {
 }
 @media screen and (max-width:1024px){
     .contenedor-balanza{
-        top: 90vh;
+        top: 79vh;
     }
     .contenedor-pbal{
         font-size: 1em;
@@ -503,7 +503,7 @@ button:active span::before {
 @media screen and (max-width:768px){
     .contenedor-balanza{
         flex-direction: column-reverse;
-        top: 63vh;
+        top: 52vh;
     }
     .img-balanza{
         width: 100%;
@@ -545,7 +545,7 @@ button:active span::before {
 /* Iframes */
 .contenedor-iframes{
     position: relative;
-    top: 120vh;
+    top: 115vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -554,7 +554,7 @@ button:active span::before {
 
 @media screen and (max-width:1024px){
     .contenedor-iframes{
-        top: 100vh;
+        top: 90vh;
         flex-direction: column;
     }
     .iframeUno{
@@ -579,7 +579,7 @@ button:active span::before {
 }
 @media screen and (max-width:768px){
     .contenedor-iframes{
-        top: 73vh;
+        top: 62vh;
     }
 }
 @media screen and (max-width:522px){
@@ -597,7 +597,7 @@ footer{
     height: 50vh;
     width: 100%;
     position: relative;
-    top: 129vh;
+    top: 125vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -669,11 +669,11 @@ footer{
 }
 @media screen and (max-width:1024px){
     footer{
-        top: 105vh;
+        top: 100vh;
     }
 }
 @media screen and (max-width:768px){
     footer{
-        top: 80vh;
+        top: 68vh;
     }
 }
