@@ -26,7 +26,7 @@ header nav{
     background-color:var(--color-azul);
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
     height: 87px;
 }
@@ -57,7 +57,7 @@ header nav{
 } 
 
 /* Botones y Hovers */
-button {
+.btn-nav {
     border: none;
     display: block;
     position: relative;
@@ -76,7 +76,7 @@ button {
     box-shadow: 7px 7px 35px -5px rgba(0,0,0,0.75);
 }
 
-button span {
+.btn-nav span {
     position: absolute;
     left: 0;
     top: 0;
@@ -87,7 +87,7 @@ button span {
     border: 4px solid var(--color-blanco);
 }
 
-button span::before {
+.btn-nav span::before {
     content: "";
     display: block;
     position: absolute;
@@ -100,18 +100,18 @@ button span::before {
     transition: all 0.5s;
 }
 
-button:hover span::before {
+.btn-nav:hover span::before {
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 100%;
     background: var(--color-azul);
 }
 
-button:hover {
+.btn-nav:hover {
     color: white;
-    border: solid 1px white;
+    /* border: solid 1px white; */
 }
 
-button:active span::before {
+.btn-nav:active span::before {
     background: var(--color-azul);
 }
 @media screen and (max-width:1027px){
@@ -514,13 +514,14 @@ button:active span::before {
 .contenedor-pbal{
     font-family: var(--font);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    flex-flow: wrap;
     font-size: 1.3em;
     letter-spacing: 1px;
     line-height: 40px;
 }
 .contenedor-pbal p{
-    padding:0 0 0 50px;
+    padding:50px 0 0 50px;
 }
 .img-balanza{
     width: 100%;
@@ -528,10 +529,106 @@ button:active span::before {
 .img-balanza img{
     width: 100%;
 }
-@media screen and (max-width:1163px){
-    .contenedor-pbal{
-        font-size: 1.2em;
+.contenedor-pbal .parrafoBoton{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Boton Asesorate ya */
+.c-button {
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0.9em 1.6em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+.parrafoBoton .linkBtn{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.c-button--gooey {
+    color: var(--color-azul);
+    /* margin: 30px 20px 0px 50px; */
+    width: 80%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 4px solid var(--color-azul);
+    border-radius: 0;
+    position: relative;
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+    background-color: var(--color-azul);
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+    color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
+
+}
+@media screen and (max-width:1320px){
+    .contenedor-pbal p{
+        padding: 10px 0 0 50px
     }
+    .contenedor-pbal .parrafoBoton{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:1234px){
+    .contenedor-pbal{
+        font-size: 1.1em;
+
+    }
+}
+@media screen and (max-width:1163px){
+    .contenedor-balanza{
+        height: 400px;
+    }
+    
 }
 @media screen and (max-width:1024px){
     .contenedor-balanza{
@@ -545,11 +642,18 @@ button:active span::before {
     .contenedor-balanza{
         width: 100%;
     }
+    .contenedor-pbal p{
+        padding: 30px 0 0 50px;
+    }
+    .img-balanza img{
+        margin-top: 40px;
+    }
 }
 @media screen and (max-width:768px){
     .contenedor-balanza{
         flex-direction: column-reverse;
         top: 52vh;
+        height: 450px;
     }
     .img-balanza{
         width: 100%;
@@ -571,6 +675,10 @@ button:active span::before {
         width: 100vh;
         padding: 10px 0;
     }
+    .c-button--gooey{
+        width: 40%;
+        margin: 15px 0 15px 0;
+    }
 }
 
 @media screen and (max-width:551px){
@@ -579,6 +687,9 @@ button:active span::before {
     }
     .contenedor-pbal{
         font-size: 15px;
+    }
+    .c-button--gooey{
+        width: 70%;
     }
 }
 @media screen and (max-width:425px){
@@ -630,8 +741,11 @@ button:active span::before {
 }
 @media screen and (max-width:522px){
     .iframeUno iframe{
-        width: 70vh;
+        /* width: 70vh; */
         height: 550px;
+    }
+    .uiScaledImageContainer .scaledImageFitWidth{
+        width: 400px;
     }
 }
 
