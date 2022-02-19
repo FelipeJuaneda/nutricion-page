@@ -26,7 +26,7 @@ header nav{
     background-color:var(--color-azul);
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 99999;
     width: 100%;
     height: 87px;
 }
@@ -835,3 +835,260 @@ footer{
     }
 }
 
+
+
+/*
+------------------------------------------------ SOBRE MI
+------------------------------------------------ 
+*/
+
+
+.containerSobremi{
+    position: relative;
+    top: 87px;
+    width: 100%;
+    margin: auto;
+    background-image: url(../imagenes/lineas-naranjas.svg);
+    height: 800px;
+}
+
+.containerSobremi .nombreUniversidad{
+    padding-top: 4rem;
+}
+.containerSobremi .nombreUniversidad .doctora{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--color-negro);
+}
+.containerSobremi .nombreUniversidad .doctora span{
+    color: var(--color-blanco);
+}
+.containerSobremi .nombreUniversidad .universidad{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-negro);
+}
+.medicaPorcentaje{
+    display: flex;
+}
+.subtituloMedic{
+    display: flex;
+    align-items: center;
+    color: ;
+}
+.subituloMedica{
+    font-size: 60px;
+    line-height: normal;
+    text-align: right;
+    color: #0bc273;
+}
+.porcentaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* background: white; */
+}
+
+.containerRedo{
+    position: relative;
+    width: 960px;
+}
+
+.containerRedo .cardPor{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 270px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+    margin-bottom: 70px;
+}
+.containerRedo .cardPor::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50;
+    width: 100%;
+    height:100%;
+    /* background: white; */
+    pointer-events: none;
+    z-index: 1;
+}
+.porcent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #fff;
+    /* background: rgb(255,255,255); */
+    z-index: 1000;
+}
+
+.porcent .numberCard{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
+}
+.porcent .numberCard h2{
+    color: #000;
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cardPor:hover .porcent .numberCard h2{
+    color: rgb(0,0,0);
+    font-size: 53px;
+}
+.porcent .numberCard h2 span{
+    color: rgb(0,0,0);
+}
+
+.text{
+    position: relative;
+    color: rgb(0,0,0);
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0px;
+    transition: 0.5s;
+}
+.text span{
+    color: var(--color-blanco);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-85deg)!important;
+}
+
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #e79595a2;
+    stroke-width: 10;
+    stroke-linecap: round !important;
+    transform: translate(5px, 5px);
+}
+
+/*Claculo para simular el porcent*/
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+
+.cardPor:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 80)/100);
+    stroke: rgb(255,0,0);
+}
+.cardPor:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 30)/100);
+    stroke: rgb(255,0,0);
+}
+.cardPor:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 60)/100);
+    stroke: rgb(255,0,0);
+}
+
+@media only screen and (max-width:600px)
+{
+    .porcentaje{
+        height: auto;
+        margin-left: 30px;
+        flex-flow: row wrap;
+    }
+} 
+
+@media screen and(max-width: 1068px){
+    .containerRedo{
+        max-width: 80rem;
+        min-width: 70rem;
+    }
+    
+}
+
+@media screen and (max-width: 868px){
+
+    .containerRedo{
+        max-width: 80rem;
+    }
+}
+@media screen and (max-width: 768px){
+
+    .containerRedo{
+        padding: 2.5rem;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+.contenedorClinica{
+    position: relative;
+    bottom: 80vh;
+    width: 70%;
+    margin: auto;
+}
+
+@media screen and (max-width:1097px){
+    .contenedorClinica{
+        width: 80%;
+        bottom: 74vh;
+    }
+}
+@media screen and (max-width:1057px){
+    .containerSobremi{
+        background-position: right;
+        background-attachment: fixed;
+    }
+    .contenedorClinica{
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    .medicaPorcentaje{
+        flex-direction: column;
+    }
+    .subituloMedica{
+        text-align: center;
+        width: 91%;
+        margin: auto;
+    }
+    .containerRedo{
+        padding: 0;
+    }
+    .porcentaje{
+        width: 100%;
+    }
+}
+@media screen and (max-width:644px){
+    .porcentaje{
+        width: 90%;
+    }
+    .subituloMedica{
+        font-size: 40px;
+        width: 100%;
+    }
+    .contenedorClinica{
+        bottom: 64vh;
+    }
+    
+}
+@media screen and (max-width:430px){
+    .containerSobremi .nombreUniversidad .doctora{
+        font-size: 2.70rem;
+    }
+}
