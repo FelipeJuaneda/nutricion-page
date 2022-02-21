@@ -1061,6 +1061,11 @@ svg circle:nth-child(2){
         bottom: 84vh;
     }
 }
+@media screen and (max-width:1440px){
+    .contenedorClinica{
+        bottom: 65vh;
+    }
+}
 @media screen and (max-width:1057px){
     .containerSobremi{
         background-position: right;
@@ -1085,6 +1090,9 @@ svg circle:nth-child(2){
     .porcentaje{
         width: 100%;
     }
+    .containerSobremi{
+        background-position: bottom;
+    }
 }
 @media screen and (max-width:644px){
     .porcentaje{
@@ -1094,10 +1102,6 @@ svg circle:nth-child(2){
         font-size: 40px;
         width: 100%;
     }
-    .contenedorClinica{
-        bottom: 87vh;
-    }
-    
 }
 @media screen and (max-width:430px){
     .containerSobremi .nombreUniversidad .doctora{
