@@ -851,6 +851,7 @@ footer{
     margin: auto;
     background-image: url(../imagenes/lineas-naranjas.svg);
     height: 800px;
+    background-attachment: fixed;
 }
 @media screen and (max-width:1024px){
     .containerSobremi{
@@ -1107,4 +1108,49 @@ svg circle:nth-child(2){
     .containerSobremi .nombreUniversidad .doctora{
         font-size: 2.70rem;
     }
+}
+
+/* PREGUNTAS FRECUENTES */
+.contenedorPatologias{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    bottom: 30vh;
+}
+.contenedorPatologias .patologias{
+    text-align: center;
+    
+}
+.contenedorPatologias .patologias .listaPatologias{
+    list-style: none;
+    padding: 0%;
+}
+.contenedorPatologias .preguntasFrecuentes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1.5rem;
+    margin-top: 50px;
+}
+.contenedorPatologias .preguntasFrecuentes h3{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: #0bc273;
+    font-size: 3rem;
+}
+.contenedorPatologias .preguntasFrecuentes .preguntaUno{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.contenedorPatologias .preguntasFrecuentes .preguntaDos{
+    grid-column: 2/2;
+    grid-row: 2/3;
+}
+.contenedorPatologias .preguntasFrecuentes .preguntaTres{
+    grid-column: 2/2;
+    grid-row: 3/3;
+}
+.contenedorPatologias .preguntasFrecuentes .preguntaCuatro{
+    grid-column: 1/2;
+    grid-row: 3/3;
 }
