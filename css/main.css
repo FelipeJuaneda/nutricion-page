@@ -18,17 +18,18 @@
 
 
 /* HEADER NAVEGADOR */
+header{
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    background-color:var(--color-azul);
+    width: 100%;
+}
 header nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* min-height: 8vh; */
-    background-color:var(--color-azul);
-    position: fixed;
-    top: 0;
-    z-index: 99999;
     width: 100%;
-    height: 87px;
 }
 .contenedor-img{
     display: flex;
@@ -43,8 +44,8 @@ header nav{
     display: flex;
     justify-content: space-around;
     width: 50%;
+    margin: 0;
 }
-
 .lista-nav li{
     list-style: none;
 }
@@ -161,7 +162,7 @@ header nav{
         position: absolute;
         right: 0;
         height: 92vh;
-        top: 9vh;
+        top: 8vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -177,7 +178,7 @@ header nav{
 @media screen and (max-width:500px){
     .lista-nav{
         width: 70%;
-        top: 9vh;
+        top: 7.4vh;
     }
 }
 .nav-activo{
@@ -751,15 +752,15 @@ header nav{
 
 /* FOOTER */
 footer{
-    height: 50vh;
+    height: 44vh;
     width: 100%;
     position: relative;
     top: 125vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../imagenes/fondo-footer.png);
-    background-size: contain;
+    background-image: url(../imagenes/pasto-feli-2.png);
+    background-size: cover;
 }
 .contenedor-footer{
     margin-top: 60px;
@@ -845,13 +846,17 @@ footer{
 
 .containerSobremi{
     position: relative;
-    top: 87px;
+    top: 83px;
     width: 100%;
     margin: auto;
     background-image: url(../imagenes/lineas-naranjas.svg);
     height: 800px;
 }
-
+@media screen and (max-width:1024px){
+    .containerSobremi{
+        top: 65.8px;
+    }
+}
 .containerSobremi .nombreUniversidad{
     padding-top: 4rem;
 }
@@ -868,6 +873,7 @@ footer{
     font-size: 2rem;
     color: var(--color-negro);
 }
+
 .medicaPorcentaje{
     display: flex;
 }
@@ -1022,17 +1028,24 @@ svg circle:nth-child(2){
 }
 
 @media screen and (max-width: 868px){
-
     .containerRedo{
         max-width: 80rem;
     }
+    .subituloMedica{
+        font-size: 50px;
+    }
+    .doctora{
+        font-size: 2.7rem;
+    }
 }
 @media screen and (max-width: 768px){
-
     .containerRedo{
         padding: 2.5rem;
         flex-direction: column;
         margin-top: 20px;
+    }
+    .containerSobremi{
+        top: 50.42px;
     }
 }
 .contenedorClinica{
@@ -1045,7 +1058,7 @@ svg circle:nth-child(2){
 @media screen and (max-width:1097px){
     .contenedorClinica{
         width: 80%;
-        bottom: 74vh;
+        bottom: 84vh;
     }
 }
 @media screen and (max-width:1057px){
@@ -1082,7 +1095,7 @@ svg circle:nth-child(2){
         width: 100%;
     }
     .contenedorClinica{
-        bottom: 64vh;
+        bottom: 87vh;
     }
     
 }
