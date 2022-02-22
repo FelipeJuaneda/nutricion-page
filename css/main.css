@@ -705,7 +705,7 @@ header nav{
     top: 115vh;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 @media screen and (max-width:1024px){
     .contenedor-iframes{
@@ -833,6 +833,10 @@ footer{
 @media screen and (max-width:768px){
     footer{
         top: 68vh;
+        height: 33vh;
+    }
+    .contenedor-footer{
+        margin-top: 29px;
     }
 }
 
@@ -1112,25 +1116,61 @@ svg circle:nth-child(2){
 
 /* PREGUNTAS FRECUENTES */
 .contenedorPatologias{
-    width: 90%;
-    margin: auto;
+    width: 100%;
     position: relative;
-    bottom: 30vh;
+    bottom: 20vh;
 }
 .contenedorPatologias .patologias{
     text-align: center;
-    
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 110px;
 }
+.contenedorPatologias .patologias .contenedorLista::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 327px;
+    background-color: #d5a733;
+    right: 50vw;
+    top: -50px;
+}
+
 .contenedorPatologias .patologias .listaPatologias{
     list-style: none;
     padding: 0%;
 }
+.contenedorPatologias .patologias .imagenPatologias{
+    width: 25%;
+}
+.contenedorPatologias .patologias .imagenPatologias img{
+    width: 90%;
+}
+@media screen and (max-width:1433px){
+    .contenedorPatologias .patologias .imagenPatologias img{
+        width: 67%;
+    }
+}
+
+@media screen and (max-width:1300px){
+    .contenedorPatologias .patologias .imagenPatologias img{
+        width: 75%;
+    }
+}
+@media screen and (max-width:1183px){
+    .contenedorPatologias .patologias .imagenPatologias img{
+        width: 100%;
+    }
+}
+
+
 .contenedorPatologias .preguntasFrecuentes{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3, auto);
     gap: 1.5rem;
-    margin-top: 50px;
+    width: 90%;
+    margin: 50px auto;
 }
 .contenedorPatologias .preguntasFrecuentes h3{
     grid-column: 1/2;
@@ -1153,4 +1193,28 @@ svg circle:nth-child(2){
 .contenedorPatologias .preguntasFrecuentes .preguntaCuatro{
     grid-column: 1/2;
     grid-row: 3/3;
+}
+
+
+@media screen and (max-width:768px){
+    .contenedorPatologias{
+        bottom: 50vh;
+    }
+    .contenedorPatologias .preguntasFrecuentes{
+        display: flex;
+        flex-direction: column;
+        width: 63%;
+        text-align: center;
+    }
+}
+@media screen and (max-width:600px){
+    .contenedorPatologias .preguntasFrecuentes{
+        width: 100%;
+    }
+    .contenedorPatologias .preguntasFrecuentes .preguntaUno,
+    .preguntaDos,
+    .preguntaTres,
+    .preguntaCuatro{
+        padding: 5px 30px;
+    }
 }
