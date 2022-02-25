@@ -4,6 +4,8 @@
     --color-gris: #ccc;
     --color-negro: #000000;
     --font: 'Libre Baskerville', serif;;
+    --color-verde:#0bc273;
+    --color-naranja:#D5AA3B;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
@@ -19,7 +21,7 @@
 
 /* HEADER NAVEGADOR */
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 99999;
     background-color:var(--color-azul);
@@ -45,6 +47,7 @@ header nav{
     justify-content: space-around;
     width: 50%;
     margin: 0;
+    padding: 0;
 }
 .lista-nav li{
     list-style: none;
@@ -281,7 +284,7 @@ header nav{
     margin: auto;
     display: flex;
     position: relative;
-    top: 30vh;
+    top: 10vh;
 }
 .contenedor-main .contenedor-img{
     width: 100%;
@@ -336,9 +339,6 @@ header nav{
 
 
 @media screen and (max-width:1024px){
-    .contenedor-main{
-        top: 20vh;
-    }
     .contenedor-titulo h1{
         font-size: 2.4em;
     }
@@ -707,6 +707,9 @@ header nav{
     display: flex;
     justify-content: space-evenly;
 }
+.ltr .timestampContent{
+    display: none;
+}
 @media screen and (max-width:1024px){
     .contenedor-iframes{
         top: 90vh;
@@ -729,7 +732,7 @@ header nav{
     .iframeTres{
         display: flex;
         justify-content: center;
-        margin-top: 55px;
+        margin-top: 11px;
     }
 }
 @media screen and (max-width:768px){
@@ -850,20 +853,15 @@ footer{
 
 .containerSobremi{
     position: relative;
-    top: 83px;
     width: 100%;
     margin: auto;
     background-image: url(../imagenes/lineas-naranjas.svg);
     height: 800px;
     background-attachment: fixed;
 }
-@media screen and (max-width:1024px){
-    .containerSobremi{
-        top: 65.8px;
-    }
-}
+
 .containerSobremi .nombreUniversidad{
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 .containerSobremi .nombreUniversidad .doctora{
     text-align: center;
@@ -873,165 +871,153 @@ footer{
 .containerSobremi .nombreUniversidad .doctora span{
     color: var(--color-blanco);
 }
+.containerSobremi .nombreUniversidad .universidad span{
+    color: var(--color-blanco);
+}
 .containerSobremi .nombreUniversidad .universidad{
     text-align: center;
     font-size: 2rem;
     color: var(--color-negro);
 }
+.contenedorClinica{
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
 
 .medicaPorcentaje{
     display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 .subtituloMedic{
     display: flex;
     align-items: center;
 }
 .subituloMedica{
-    font-size: 60px;
+    font-size: 53px;
     line-height: normal;
-    text-align: right;
-    color: #0bc273;
+    color: var(--color-verde);
 }
-.porcentaje{
+.contenedorClinica .medicaPorcentaje .habitos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contenedorClinica .medicaPorcentaje .habitos .mision{
+    color: #808080;
+    font-size: 20px;
+}
+.contenedorClinica .medicaPorcentaje .habitos .contenedorCirculos{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 50%;
-    /* background: white; */
+    gap: 50px;
 }
-
-.containerRedo{
-    position: relative;
-    width: 960px;
-}
-
-.containerRedo .cardPor{
-    position: relative;
+.contenedorClinica .medicaPorcentaje .habitos .recetas{
     display: flex;
-    justify-content:center;
+    flex-direction: column;
     align-items: center;
-    height: 270px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.5s;
-    margin-bottom: 70px;
+    width: 30%;
 }
-.containerRedo .cardPor::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50;
-    width: 100%;
-    height:100%;
-    /* background: white; */
-    pointer-events: none;
-    z-index: 1;
-}
-.porcent{
-    position: relative;
+.contenedorClinica .medicaPorcentaje .habitos .recetas img{
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    box-shadow: inset 0 0 50px #fff;
-    /* background: rgb(255,255,255); */
-    z-index: 1000;
-}
-
-.porcent .numberCard{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    border-radius: 50%;
-}
-.porcent .numberCard h2{
-    color: #000;
-    font-weight: 700;
-    font-size: 40px;
-    transition: 0.5s;
+    border-radius: 100%;
+    border: solid rgb(89, 89, 90) 10px;
+    transition: all .3s;
     cursor: pointer;
 }
-
-.cardPor:hover .porcent .numberCard h2{
-    color: rgb(0,0,0);
-    font-size: 53px;
+.contenedorClinica .medicaPorcentaje .habitos .recetas img:hover{
+    border: solid var(--color-naranja) 10px;
+    transform: scale(.95);
 }
-.porcent .numberCard h2 span{
-    color: rgb(0,0,0);
-}
-
-.text{
+.contenedorClinica .medicaPorcentaje .habitos .recetas h3{
+    color: var(--color-negro);
+    padding-top: 15px;
     position: relative;
-    color: rgb(0,0,0);
-    margin-top: 20px;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0px;
-    transition: 0.5s;
 }
-.text span{
+.contenedorClinica .medicaPorcentaje .habitos .recetas h3::before{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 12.5%;
+    width: 75%;
+    height: 2px;
+    background-color: var(--color-naranja);
+}
+.contenedorClinica .medicaPorcentaje .habitos .recetas p{
     color: var(--color-blanco);
-    font-size: 20px;
-    letter-spacing: 2px;
 }
-svg{
+.contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+.contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria img{
+    width: 150px;
+    border-radius: 100%;
+    border: solid rgb(89, 89, 90) 10px;
+    height: 150px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria img:hover{
+    border: solid #6588eb 10px;
+    transform: scale(.95);
+}
+.contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria h3{
+    color: var(--color-negro);
+    padding-top: 15px;
     position: relative;
+}
+.contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria h3::before{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 12.5%;
+    width: 75%;
+    height: 2px;
+    background-color: #6588eb;
+}
+.contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria p{
+    color: var(--color-blanco);
+}
+.contenedorClinica .medicaPorcentaje .habitos .tips{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+.contenedorClinica .medicaPorcentaje .habitos .tips img{
     width: 150px;
     height: 150px;
-    transform: rotate(-85deg)!important;
+    border-radius: 100%;
+    border: solid rgb(89, 89, 90) 10px;
+    transition: all .3s;
+    cursor: pointer;
 }
-
-svg circle{
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke: #e79595a2;
-    stroke-width: 10;
-    stroke-linecap: round !important;
-    transform: translate(5px, 5px);
+.contenedorClinica .medicaPorcentaje .habitos .tips img:hover{
+    border: solid var(--color-verde) 10px;
+    transform: scale(.95);
 }
-
-/*Claculo para simular el porcent*/
-svg circle:nth-child(2){
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
+.contenedorClinica .medicaPorcentaje .habitos .tips h3{
+    color: var(--color-negro);
+    padding-top: 15px;
+    position: relative;
 }
-
-
-.cardPor:nth-child(1) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 80)/100);
-    stroke: rgb(255,0,0);
+.contenedorClinica .medicaPorcentaje .habitos .tips h3::before{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 12.5%;
+    width: 75%;
+    height: 2px;
+    background-color: var(--color-verde);
 }
-.cardPor:nth-child(2) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 30)/100);
-    stroke: rgb(255,0,0);
+.contenedorClinica .medicaPorcentaje .habitos .tips p{
+    color: var(--color-blanco);
 }
-.cardPor:nth-child(3) svg circle:nth-child(2){
-    stroke-dashoffset: calc(440 - (440 * 60)/100);
-    stroke: rgb(255,0,0);
-}
-
-@media only screen and (max-width:600px)
-{
-    .porcentaje{
-        height: auto;
-        margin-left: 30px;
-        flex-flow: row wrap;
-    }
-} 
-
-@media screen and(max-width: 1068px){
-    .containerRedo{
-        max-width: 80rem;
-        min-width: 70rem;
-    }
-    
-}
-
 @media screen and (max-width: 868px){
     .containerRedo{
         max-width: 80rem;
@@ -1039,36 +1025,18 @@ svg circle:nth-child(2){
     .subituloMedica{
         font-size: 50px;
     }
-    .doctora{
-        font-size: 2.7rem;
-    }
 }
-@media screen and (max-width: 768px){
-    .containerRedo{
-        padding: 2.5rem;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .containerSobremi{
-        top: 50.42px;
-    }
-}
-.contenedorClinica{
-    position: relative;
-    bottom: 80vh;
-    width: 70%;
-    margin: auto;
-}
-
-@media screen and (max-width:1097px){
+@media screen and (max-width:956px){
     .contenedorClinica{
-        width: 80%;
-        bottom: 84vh;
+        width: 100%;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .recetas{
+        width: 25%;
     }
 }
 @media screen and (max-width:1440px){
     .contenedorClinica{
-        bottom: 65vh;
+        bottom: 100vh;
     }
 }
 @media screen and (max-width:1057px){
@@ -1076,11 +1044,11 @@ svg circle:nth-child(2){
         background-position: right;
         background-attachment: fixed;
     }
-    .contenedorClinica{
-        width: 100%;
-    }
 }
 @media screen and (max-width:768px){
+    .contenedorClinica{
+        bottom: 104vh;
+    }
     .medicaPorcentaje{
         flex-direction: column;
     }
@@ -1089,29 +1057,126 @@ svg circle:nth-child(2){
         width: 91%;
         margin: auto;
     }
-    .containerRedo{
-        padding: 0;
-    }
-    .porcentaje{
-        width: 100%;
-    }
     .containerSobremi{
         background-position: bottom;
     }
+    .containerSobremi .nombreUniversidad .doctora{
+        font-size: 2.3rem;
+    }
+    .containerSobremi .nombreUniversidad .universidad{
+        font-size: 1.4rem;
+    }
 }
-@media screen and (max-width:644px){
-    .porcentaje{
-        width: 90%;
+@media screen and (max-width:715px){
+    
+    .contenedorClinica .medicaPorcentaje .habitos{
+        gap: 25px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .mision{
+        margin-bottom: 0;
     }
     .subituloMedica{
         font-size: 40px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .contenedorCirculos{
+        gap: 0;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .recetas img{
+        width: 113px;
+        height: 113px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .recetas h3{
+        font-size: 16px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .recetas p{
+        font-size: 15px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria img{
+        width: 113px;
+        height: 113px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria h3{
+        font-size: 16px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria p{
+        font-size: 15px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .tips img{
+        width: 113px;
+        height: 113px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .tips h3{
+        font-size: 16px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .tips p{
+        font-size: 15px;
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+    /* ADAPTANDO CIRCULOS A MOVIL */
+    .contenedorClinica .medicaPorcentaje .habitos .contenedorCirculos{
+        display: grid;
+        grid-template-rows: repeat(1,auto);
+        grid-template-columns: repeat(1,auto);
+        justify-content: center;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .tips{
+        margin-left: 100px;
+        width: 100%;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria{
+        width: 100%;
+        grid-row: 1;
+        padding-right: 20px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .recetas{
+        width: 50%;
+        grid-row: 1;
+    }
+}
+@media screen and (max-width:644px){
+    .subituloMedica{
+        font-size: 30px;
         width: 100%;
     }
 }
-@media screen and (max-width:430px){
-    .containerSobremi .nombreUniversidad .doctora{
-        font-size: 2.70rem;
+@media screen and (max-width:500px){
+    .subituloMedica{
+        font-size: 24px;
     }
+    .containerSobremi .nombreUniversidad .doctora{
+        font-size: 2rem;
+    }
+    .containerSobremi .nombreUniversidad .universidad{
+        font-size: 1.2rem;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .mision{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria{
+        padding-right: 0;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .tips{
+        margin-left: 90px;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .tips img{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .recetas{
+        width: 75%;
+    }
+    .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria{
+        width: 75%;
+    }
+}
+@media screen and (max-width:420px){
+    .contenedorClinica .medicaPorcentaje .habitos .tips{
+        margin-left: 84px;
+    }
+    
 }
 
 /* PREGUNTAS FRECUENTES */
@@ -1162,7 +1227,9 @@ svg circle:nth-child(2){
         width: 100%;
     }
 }
+@media screen and (max-width:939px){
 
+}
 
 .contenedorPatologias .preguntasFrecuentes{
     display: grid;
