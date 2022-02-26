@@ -864,6 +864,16 @@ footer{
     position: relative;
     top: 15vh;
 }
+@media screen and (max-width:900px){
+    .containerSobremi .nombreUniversidad{
+        padding-top: .5rem;
+        position: relative;
+        top: 15vh;
+    }
+    .contenedorClinica{
+        bottom: 80vh;
+    }
+}
 .containerSobremi .nombreUniversidad .doctora{
     text-align: center;
     font-size: 3rem;
@@ -1048,7 +1058,7 @@ footer{
 }
 @media screen and (max-width:768px){
     .contenedorClinica{
-        bottom: 92vh;
+        bottom: 85vh;
     }
     .medicaPorcentaje{
         flex-direction: column;
@@ -1066,6 +1076,9 @@ footer{
     }
     .containerSobremi .nombreUniversidad .universidad{
         font-size: 1.4rem;
+    }
+    .contenedorLista{
+        width: 100%;
     }
 }
 @media screen and (max-width:715px){
@@ -1259,7 +1272,7 @@ footer{
         width: 327px;
         height: 2px;
         right: 27vw;
-        top: 249px;
+        top: 264px;
     }
     .contenedorPatologias .patologias .imagenPatologias{
         margin-top: 40px;
