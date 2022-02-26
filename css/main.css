@@ -15,11 +15,22 @@
     margin: 0%;
     box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.205);;
+}
+::-webkit-scrollbar-thumb {
+    background: black; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-verde); 
+}
 
 /* HEADER NAVEGADOR */
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 99999;
     background-color:var(--color-azul);
@@ -48,9 +59,19 @@ header nav{
     padding: 0;
 }
 .lista-nav li{
+    position: relative;
     list-style: none;
 }
-
+@media screen and (max-width:768px){
+    .lista-nav li::after{
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 148px;
+        right: 50%;
+        background-color: #D5AA3B;
+    }
+}
 .lista-nav li a{
     color:var(--color-blanco);
     text-decoration: none;
@@ -160,7 +181,7 @@ header nav{
         border-radius: 3px;
     }
     .lista-nav{
-        position: absolute;
+        position: fixed;
         right: 0;
         height: 92vh;
         top: 8vh;
@@ -178,8 +199,9 @@ header nav{
 }
 @media screen and (max-width:500px){
     .lista-nav{
-        width: 70%;
+        width: 55%;
         top: 7.4vh;
+        height: 100%;
     }
 }
 .nav-activo{
@@ -205,12 +227,13 @@ header nav{
     height: 880px;
     background-size:contain;
     background-repeat: round;
-    position: absolute;
+    position: relative;
 }
 @media screen and (max-width:1024px){
     .nubes{
         background-size: auto;
-        height: 670px;
+        height: 864px;
+        background-image: url(../imagenes/nubeocho.svg);
     }
 }
 @media screen and (max-width:958px){
@@ -221,7 +244,15 @@ header nav{
 @media screen and (max-width:768px){
     .nubes{
         background-size: auto;
-        height: 765px;
+        height: 870px;
+        background-image: url(../imagenes/nubemil.svg);
+    }
+}
+@media screen and (max-width:600px){
+    .nubes{
+        background-size: auto;
+        height: 776px;
+        background-image: url(../imagenes/nubemil.svg);
     }
 }
 
@@ -278,10 +309,11 @@ header nav{
 
 /* Titulo Parrafo */
 .contenedor-main{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
-    position: relative;
+    position: absolute;
+    padding: 0 50px 0 0;
     top: 20vh;
 }
 .contenedor-main .contenedor-img{
@@ -354,6 +386,9 @@ header nav{
     }
 }
 @media screen and (max-width:970px){
+    .contenedor-main{
+        top: 30vh;
+    }
     .contenedor-main .contenedor-img{
         width: 70rem;
     }
@@ -376,7 +411,9 @@ header nav{
 }
 @media screen and (max-width:768px){
     .contenedor-main{
-        width: 75%;
+        top: 15vh;
+        width: 100%;
+        padding: 0 50px 0 40px;
         flex-direction: column-reverse;
     }
     .contenedor-main .contenedor-img{
@@ -384,8 +421,7 @@ header nav{
         width: 100%;
     }
     .contenedor-main .contenedor-img .diet-img{
-        width: 70%;
-        
+        width: 80%;
     }
     .contenedor-titulo{
         text-align: start;
@@ -402,7 +438,6 @@ header nav{
 @media screen and (max-width:643px){
     .contenedor-main{
         width: 100%;
-        top: 14vh;
     }
     .contenedor-titulo h1{
         justify-content: center;
@@ -418,6 +453,9 @@ header nav{
     }
     .contenedor-titulo .diet-parrafo{
         text-align: center;
+    }
+    .contenedor-main .contenedor-img .diet-img{
+        width: 100%;
     }
 }
 @media screen and (max-width:558px){
@@ -442,7 +480,8 @@ header nav{
     display: flex;
     position: relative;
     margin: auto;
-    top: 94vh;
+    top: 0;
+    margin: 100px auto;
     width: 90%;
 }
 .contenedor-redonda .img-redonda1{
@@ -464,15 +503,9 @@ header nav{
 .contenedor-redonda img{
     width: 65%;
 }
-@media screen and (max-width:1024px){
-    .contenedor-redonda{
-        top: 70vh;
-    }
-}
 
 @media screen and (max-width:768px){
     .contenedor-redonda{
-        top: 44vh;
         width: 83%;
     }
 }
@@ -480,7 +513,6 @@ header nav{
 @media screen and (max-width:425px){
     .contenedor-redonda{
         width: 92%;
-        top: 48vh;
     }
     .contenedor-redonda .img-redonda1{
         justify-content: end;
@@ -501,9 +533,9 @@ header nav{
 /* Contenedor Balanza */
 .contenedor-balanza{
     position: relative;
-    top: 102vh;
+    top: 0;
     display: flex;
-    margin: auto;
+    margin: 100px auto;
     width: 80%;
     background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
     border-radius: 5px;
@@ -632,7 +664,7 @@ header nav{
 }
 @media screen and (max-width:1024px){
     .contenedor-balanza{
-        top: 79vh;
+
     }
     .contenedor-pbal{
         font-size: 1em;
@@ -652,7 +684,7 @@ header nav{
 @media screen and (max-width:768px){
     .contenedor-balanza{
         flex-direction: column-reverse;
-        top: 52vh;
+
         height: 450px;
     }
     .img-balanza{
@@ -701,7 +733,8 @@ header nav{
 /* Iframes */
 .contenedor-iframes{
     position: relative;
-    top: 115vh;
+    top: 0;
+    margin: 50px 0 100px 0;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -711,7 +744,6 @@ header nav{
 }
 @media screen and (max-width:1024px){
     .contenedor-iframes{
-        top: 90vh;
         flex-direction: column;
     }
     .iframeUno{
@@ -735,9 +767,6 @@ header nav{
     }
 }
 @media screen and (max-width:768px){
-    .contenedor-iframes{
-        top: 62vh;
-    }
     .iframeDos .iframe-dos iframe{
         height: 305px;
     }
@@ -756,8 +785,6 @@ header nav{
 footer{
     height: 44vh;
     width: 100%;
-    position: relative;
-    top: 125vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -827,14 +854,9 @@ footer{
         height: 30px;
     }
 }
-@media screen and (max-width:1024px){
-    footer{
-        top: 100vh;
-    }
-}
+
 @media screen and (max-width:768px){
     footer{
-        top: 68vh;
         height: 33vh;
     }
     .contenedor-footer{
@@ -861,19 +883,11 @@ footer{
 
 .containerSobremi .nombreUniversidad{
     padding-top: 2rem;
-    position: relative;
-    top: 15vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
-@media screen and (max-width:900px){
-    .containerSobremi .nombreUniversidad{
-        padding-top: .5rem;
-        position: relative;
-        top: 15vh;
-    }
-    .contenedorClinica{
-        bottom: 80vh;
-    }
-}
+
 .containerSobremi .nombreUniversidad .doctora{
     text-align: center;
     font-size: 3rem;
@@ -891,9 +905,10 @@ footer{
     color: var(--color-negro);
 }
 .contenedorClinica{
-    position: relative;
-    width: 80%;
+    position: absolute;
+    width: 100%;
     margin: auto;
+    bottom: 200px;
 }
 
 .medicaPorcentaje{
@@ -907,6 +922,7 @@ footer{
 }
 .subituloMedica{
     font-size: 53px;
+    width: 100%;
     line-height: normal;
     color: var(--color-verde);
 }
@@ -1042,12 +1058,7 @@ footer{
         width: 100%;
     }
     .contenedorClinica .medicaPorcentaje .habitos .recetas{
-        width: 25%;
-    }
-}
-@media screen and (max-width:1440px){
-    .contenedorClinica{
-        bottom: 86vh;
+        width: 36%;
     }
 }
 @media screen and (max-width:1057px){
@@ -1058,7 +1069,7 @@ footer{
 }
 @media screen and (max-width:768px){
     .contenedorClinica{
-        bottom: 85vh;
+        
     }
     .medicaPorcentaje{
         flex-direction: column;
@@ -1204,7 +1215,7 @@ footer{
 .contenedorPatologias{
     width: 100%;
     position: relative;
-    bottom: 60vh;
+    margin: 240px 0;
 }
 .contenedorPatologias .patologias{
     text-align: center;
@@ -1283,13 +1294,18 @@ footer{
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3, auto);
     gap: 1.5rem;
-    width: 90%;
-    margin: 50px auto;
+    width: 100%;
+    margin: 180px auto;
+    padding: 50px;
+    background-color: var(--color-verde);
+    box-shadow: -1px 10px 19px 1px rgba(87,135,102,0.79);
+    -webkit-box-shadow: -1px 10px 19px 1px rgba(87,135,102,0.79);
+    -moz-box-shadow: -1px 10px 19px 1px rgba(87,135,102,0.79);
 }
 .contenedorPatologias .preguntasFrecuentes h3{
     grid-column: 1/2;
     grid-row: 1/2;
-    color: #0bc273;
+    color: var(--color-blanco);
     font-size: 3rem;
 }
 .contenedorPatologias .preguntasFrecuentes .preguntaUno{
@@ -1312,12 +1328,11 @@ footer{
 
 @media screen and (max-width:768px){
     .contenedorPatologias{
-        bottom: 63vh;
+        margin: 115px 0;
     }
     .contenedorPatologias .preguntasFrecuentes{
         display: flex;
         flex-direction: column;
-        width: 63%;
         text-align: center;
     }
 }
@@ -1341,6 +1356,12 @@ footer{
         right: 12vw;
     }
 }
+
+@media screen and (max-width:439px){
+    .contenedorPatologias .preguntasFrecuentes .preguntaUno, .preguntaDos, .preguntaTres, .preguntaCuatro{
+        padding: 0 0;
+    }
+}
 @media screen and (max-width:420px){
     .contenedorPatologias .patologias .contenedorLista::after{
         right: 0vw;
@@ -1352,14 +1373,4 @@ footer{
         width: 40%;
     }
 }
-@media screen and (max-width:600px){
-    .contenedorPatologias .preguntasFrecuentes{
-        width: 100%;
-    }
-    .contenedorPatologias .preguntasFrecuentes .preguntaUno,
-    .preguntaDos,
-    .preguntaTres,
-    .preguntaCuatro{
-        padding: 5px 30px;
-    }
-}
+
