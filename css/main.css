@@ -1604,18 +1604,20 @@ footer{
 /* FORMULARIO =================================== */
 
 .form_wrap{
-    width: 1050px;
-    height: 530px;
+    width: 80%;
+    height: 100%;
     margin: 50px auto;
     display: flex;
-
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 20%);
     font-family: var(--font);
 }
-
+.form_wrap #trucazo{
+    opacity: 0;
+}
 /* Informacion de Contacto*/
 
 .cantact_info::before{
@@ -1632,17 +1634,15 @@ footer{
 }
 
 .cantact_info{
-    width: 38%;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-image: url('../fondo.jpg');
-    background-size: cover;
-    background-position: center center;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../fondo.jpg);
+        background-size: cover;
+        background-position: center center;
 
 }
 
@@ -1692,8 +1692,9 @@ footer{
 
 /* Formulario de contacto*/
 form.form_contact{
-    width: 62%;
+    width: 85%;
     padding: 30px 40px;
+    margin: auto;
 }
 
 form.form_contact h2{
@@ -1733,7 +1734,7 @@ form.form_contact textarea{
     max-height: 90px;
 }
 
-form.form_contact input[type="submit"]{
+form.form_contact button[type="submit"]{
     width: 180px;
 	background: #4091EC;
 	padding: 10px;
@@ -1749,7 +1750,7 @@ form.form_contact input[type="submit"]{
 	cursor: pointer;
 }
 
-form.form_contact input[type="submit"]:hover{
+form.form_contact button[type="submit"]:hover{
     background: #3371B6;
 }
 
@@ -1816,3 +1817,4 @@ form.form_contact input[type="submit"]:hover{
 
 	float: right;
 }
+

@@ -82,25 +82,30 @@
             </section>
         </section>
 
-        <form action="enviar.php" method="post" class="form_contact">
+        <form action="" id="form" class="form_contact">
             <h2>Envia un mensaje</h2>
             <div class="user_info">
-                <label for="names">Nombres *</label>
-                <input type="text" id="names" name="nombre" required>
+                <label for="name">Nombre Completo *</label>
+                <input name="name" type="text" id="name">
 
                 <label for="phone">Telefono / Celular</label>
-                <input type="text" id="phone" name="telefono">
+                <input type="text" id="phone" >
 
                 <label for="email">Correo electronico *</label>
-                <input type="text" id="email" name="correo" required>
+                <input type="text" id="email" >
 
                 <label for="mensaje">Mensaje *</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-
-                <input type="submit" value="Enviar Mensaje" id="btnSend">
+                <textarea id="mensaje" name="mensaje"></textarea>
+                <button type="submit" >Enviar mensaje
+                </button>
             </div>
         </form>
+        <a href="mailto:felipejua9@gmail.com" id="trucazo">mail</a>
     </section>
+
+
+
+
 
     <!-- FOOTER -->
     <footer>
@@ -125,7 +130,7 @@
 
 
 
-
+    <script src="../js/formulario.js"></script>
     <script src="../js/jquery.js"></script>
     <script src="../js/main.js"></script>
 </body>
