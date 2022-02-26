@@ -12,10 +12,10 @@ $asunto = "Contacto desde pagina web";
 
 $carta = "De $nombre \n";
 $carta .= "Correo: $correo \n"
-$carta .= "Telefono: $telefono";
+$carta .= "Telefono: $telefono \n";
 $carta .= "Mensaje: $mensaje";
 
 //Enviando msje
-mail($destinatario,$asunto, $carta);
+mail($destinatario, $asunto, $carta);
 header('Location:mensaje-envio.html')
 ?>
