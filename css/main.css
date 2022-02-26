@@ -19,7 +19,7 @@
 
 /* HEADER NAVEGADOR */
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 99999;
     background-color:var(--color-azul);
@@ -282,7 +282,7 @@ header nav{
     margin: auto;
     display: flex;
     position: relative;
-    top: 10vh;
+    top: 20vh;
 }
 .contenedor-main .contenedor-img{
     width: 100%;
@@ -402,6 +402,7 @@ header nav{
 @media screen and (max-width:643px){
     .contenedor-main{
         width: 100%;
+        top: 14vh;
     }
     .contenedor-titulo h1{
         justify-content: center;
@@ -854,12 +855,14 @@ footer{
     width: 100%;
     margin: auto;
     background-image: url(../imagenes/lineas-naranjas.svg);
-    height: 800px;
+    height: 950px;
     background-attachment: fixed;
 }
 
 .containerSobremi .nombreUniversidad{
     padding-top: 2rem;
+    position: relative;
+    top: 15vh;
 }
 .containerSobremi .nombreUniversidad .doctora{
     text-align: center;
@@ -1034,7 +1037,7 @@ footer{
 }
 @media screen and (max-width:1440px){
     .contenedorClinica{
-        bottom: 100vh;
+        bottom: 86vh;
     }
 }
 @media screen and (max-width:1057px){
@@ -1045,7 +1048,7 @@ footer{
 }
 @media screen and (max-width:768px){
     .contenedorClinica{
-        bottom: 104vh;
+        bottom: 92vh;
     }
     .medicaPorcentaje{
         flex-direction: column;
@@ -1119,7 +1122,7 @@ footer{
         justify-content: center;
     }
     .contenedorClinica .medicaPorcentaje .habitos .tips{
-        margin-left: 100px;
+        margin-left: 108px;
         width: 100%;
     }
     .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria{
@@ -1138,6 +1141,13 @@ footer{
         width: 100%;
     }
 }
+@media screen and (max-width:550px){
+    .contenedorClinica .medicaPorcentaje .habitos .tips{
+        margin-left: 108px;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width:500px){
     .subituloMedica{
         font-size: 24px;
@@ -1289,7 +1299,7 @@ footer{
 
 @media screen and (max-width:768px){
     .contenedorPatologias{
-        bottom: 80vh;
+        bottom: 63vh;
     }
     .contenedorPatologias .preguntasFrecuentes{
         display: flex;
