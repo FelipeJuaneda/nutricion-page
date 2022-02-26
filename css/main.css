@@ -17,8 +17,6 @@
 }
 
 
-
-
 /* HEADER NAVEGADOR */
 header{
     position: sticky;
@@ -1183,7 +1181,7 @@ footer{
 .contenedorPatologias{
     width: 100%;
     position: relative;
-    bottom: 20vh;
+    bottom: 60vh;
 }
 .contenedorPatologias .patologias{
     text-align: center;
@@ -1199,6 +1197,11 @@ footer{
     background-color: #d5a733;
     right: 50vw;
     top: -50px;
+}
+@media screen and (max-width:970px){
+    .contenedorPatologias .patologias .contenedorLista::after{
+        right: 43vw;
+    }
 }
 
 .contenedorPatologias .patologias .listaPatologias{
@@ -1228,9 +1231,30 @@ footer{
     }
 }
 @media screen and (max-width:939px){
-
+    .contenedorPatologias .patologias .imagenPatologias{
+        width: 27%;
+    }
 }
-
+@media screen and (max-width:800px){
+    .contenedorPatologias .patologias .imagenPatologias{
+        width: 30%;
+    }
+}
+@media screen and (max-width:768px){
+    .contenedorPatologias .patologias{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedorPatologias .patologias .contenedorLista::after{
+        width: 327px;
+        height: 2px;
+        right: 27vw;
+        top: 249px;
+    }
+    .contenedorPatologias .patologias .imagenPatologias{
+        margin-top: 40px;
+    }
+}
 .contenedorPatologias .preguntasFrecuentes{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -1265,13 +1289,44 @@ footer{
 
 @media screen and (max-width:768px){
     .contenedorPatologias{
-        bottom: 50vh;
+        bottom: 80vh;
     }
     .contenedorPatologias .preguntasFrecuentes{
         display: flex;
         flex-direction: column;
         width: 63%;
         text-align: center;
+    }
+}
+@media screen and (max-width:700px){
+    .contenedorPatologias .patologias .contenedorLista::after{
+        right: 24vw;
+    }
+}
+@media screen and (max-width:600px){
+    .contenedorPatologias .patologias .contenedorLista::after{
+        right: 20vw;
+    }
+}
+@media screen and (max-width:530px){
+    .contenedorPatologias .patologias .contenedorLista::after{
+        right: 15vw;
+    }
+}
+@media screen and (max-width:475px){
+    .contenedorPatologias .patologias .contenedorLista::after{
+        right: 12vw;
+    }
+}
+@media screen and (max-width:420px){
+    .contenedorPatologias .patologias .contenedorLista::after{
+        right: 0vw;
+        width: 100%;
+    }
+}
+@media screen and (max-width:630px){
+    .contenedorPatologias .patologias .imagenPatologias{
+        width: 40%;
     }
 }
 @media screen and (max-width:600px){
