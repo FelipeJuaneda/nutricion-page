@@ -927,8 +927,56 @@ footer{
 .containerSobremi .nombreUniversidad{
     padding-top: 2rem;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: 0;
     width: 100%;
+    font-family: var(--font);
+}
+/* boton descarga */
+/* From cssbuttons.io by @adamgiebl */
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: #0bc273;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #0bc273;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    margin: 40px auto;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+}
+
+/* adaptando boton */
+@media screen and (max-width:546px){
+    .cssbuttons-io-button{
+        margin: 30px auto;
+        font-size: 17px;
+        letter-spacing: normal;
+    }
+}
+@media screen and (max-width:412px){
+    .cssbuttons-io-button{
+        font-size: 15px;
+    }
 }
 
 .containerSobremi .nombreUniversidad .doctora{
@@ -952,6 +1000,21 @@ footer{
     width: 100%;
     margin: auto;
     bottom: 200px;
+}
+@media screen and (max-width:1230px){
+    .contenedorClinica{
+        bottom: 125px;
+    }
+}
+@media screen and (max-width:1022px){
+    .contenedorClinica{
+        bottom: 90px;
+    }
+}
+@media screen and (max-width:768px){
+    .contenedorClinica{
+        bottom: 40px;
+    }
 }
 
 .medicaPorcentaje{
@@ -1258,6 +1321,11 @@ footer{
     }
     
 }
+@media screen and (max-width:380px){
+    .contenedorClinica .medicaPorcentaje .habitos .tips{
+        margin-left: 79px;
+    }
+}
 
 /* PREGUNTAS FRECUENTES */
 .contenedorPatologias{
@@ -1521,6 +1589,9 @@ footer{
         width: 50%;
     }
     .usuarioRecomienda p{
-        font-size: 13px;
+        font-size: 12px;
     } 
+    .nombreLink{
+        font-size: 12px;
+    }
 }
