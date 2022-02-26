@@ -663,9 +663,6 @@ header nav{
     
 }
 @media screen and (max-width:1024px){
-    .contenedor-balanza{
-
-    }
     .contenedor-pbal{
         font-size: 1em;
     }
@@ -1068,9 +1065,6 @@ footer{
     }
 }
 @media screen and (max-width:768px){
-    .contenedorClinica{
-        
-    }
     .medicaPorcentaje{
         flex-direction: column;
     }
