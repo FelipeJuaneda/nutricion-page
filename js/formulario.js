@@ -3,7 +3,7 @@ const $buttonMailto =document.querySelector('#trucazo')
 
 
 $form.addEventListener('submit', handleSubmit)
-console.log($form);
+
 function handleSubmit(event) {
     event.prevenDefault();
     const form = new FormData(this);
