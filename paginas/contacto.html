@@ -13,6 +13,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.css">
     <!-- Link CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <title>Contacto - Ubic CERHU: Maipu 948 / MEDICI: Ayacucho 1108</title>
@@ -73,39 +75,63 @@
 
         <section class="cantact_info">
             <section class="info_title">
-                <span class="fa fa-user-circle"></span>
-                <h2>INFORMACION<br>DE CONTACTO</h2>
+                <h2>MANDAME UN MENSAJE Y <br>COORDINAMOS</h2>
             </section>
             <section class="info_items">
-                <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
-                <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+                <p><span class="fa fa-envelope"></span> silviamendozacali@gmail.com</p>
+                <p><span class="fa fa-mobile"></span> (0266)4488063</p>
             </section>
         </section>
 
-        <form action="" id="form" class="form_contact">
+        <form onsubmit="sendEmail(); reset(); return false;" class="form_contact">
             <h2>Envia un mensaje</h2>
             <div class="user_info">
-                <label for="name">Nombre Completo *</label>
-                <input name="name" type="text" id="name">
+                <label for="names">Nombre Completo *</label>
+                <input type="text" id="names">
 
                 <label for="phone">Telefono / Celular</label>
-                <input type="text" id="phone" >
+                <input type="text" id="phone">
 
                 <label for="email">Correo electronico *</label>
-                <input type="text" id="email" >
+                <input type="text" id="email">
 
                 <label for="mensaje">Mensaje *</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
-                <button type="submit" >Enviar mensaje
-                </button>
+                <textarea id="mensaje"></textarea>
+                <input type="submit" value="Enviar Mensaje" id="btnSend">
             </div>
         </form>
-        <a href="mailto:felipejua9@gmail.com" id="trucazo">mail</a>
     </section>
 
-
-
-
+    <!-- Ubicaciones -->
+    <h2 class="ubicacionTitulo text-center">Ubicaciones</h2>
+    <section class="container-fluid bg-light">
+        <section class="contenedorUbic row">
+            <div class="contenedorCerhu mt-4 col-md-12 col-lg-6">
+                <div>
+                    <h3>Consultorio CERHU</h3>
+                    <h3>Maipú 948, San Luis, Argentina</h3>
+                    <h3>(0266)4434900 / 4426479 <span class="fa fa-mobile"></span></h3>
+                </div>
+                <div class="iframeCerhu embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item w-100"
+                        src="https://www.google.com/maps/embed?pb=!4v1646179816181!6m8!1m7!1syMlKdSYJUQXjdF4BaaUynQ!2m2!1d-33.29934319443866!2d-66.33292039968175!3f22.87!4f8.379999999999995!5f0.7820865974627469"
+                        width="620" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="contenedorMedici mt-4 col-md-12 col-lg-6">
+                <div class="text-end">
+                    <h3>Consultorio MEDICI</h3>
+                    <h3>Ayacucho 1108, San Luis, Argentina</h3>
+                    <h3>(0266)4421363 / 4421918 <span class="fa fa-mobile"></span></h3>
+                </div>
+                <div class="iframeMedici embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item w-100"
+                        src="https://www.google.com/maps/embed?pb=!4v1646180005402!6m8!1m7!1svijefrqFso4Ho8ByXSRCLA!2m2!1d-33.30610466516366!2d-66.33813748315647!3f331.25409443570277!4f0!5f0.7820865974627469"
+                        width="620" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -130,7 +156,11 @@
 
 
 
-    <script src="../js/formulario.js"></script>
+
+
+
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="../js/jquery.js"></script>
     <script src="../js/main.js"></script>
 </body>

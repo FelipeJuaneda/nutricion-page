@@ -1061,6 +1061,7 @@ footer{
     border: solid rgb(89, 89, 90) 10px;
     transition: all .3s;
     cursor: pointer;
+    object-fit: cover;
 }
 .contenedorClinica .medicaPorcentaje .habitos .recetas img:hover{
     border: solid var(--color-naranja) 10px;
@@ -1096,6 +1097,7 @@ footer{
     height: 150px;
     transition: all .3s;
     cursor: pointer;
+    object-fit: cover;
 }
 .contenedorClinica .medicaPorcentaje .habitos .educacionAlimentaria img:hover{
     border: solid #6588eb 10px;
@@ -1399,7 +1401,7 @@ footer{
         width: 327px;
         height: 2px;
         right: 27vw;
-        top: 264px;
+        top: 280px;
     }
     .contenedorPatologias .patologias .imagenPatologias{
         margin-top: 40px;
@@ -1618,6 +1620,7 @@ footer{
 .form_wrap #trucazo{
     opacity: 0;
 }
+
 /* Informacion de Contacto*/
 
 .cantact_info::before{
@@ -1629,32 +1632,35 @@ footer{
     top: 0;
     left: 0;
 
-    background: #4091EC;
-    opacity: 0.9;
+    background-image: url(../imagenes/fondoverdelineas.svg);
+    background-size: 100% 64%;
+    background-attachment: fixed;
 }
 
 .cantact_info{
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-image: url(../fondo.jpg);
-        background-size: cover;
-        background-position: center center;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url(../fondo.jpg);
+    background-size: cover;
+    background-position: center center
 
 }
+.info_title {
+    width: 50%;
+}
+
 
 .info_title,
 .info_items{
     position: relative;
     z-index: 2;
-    color: #fff;
-}
-
-.info_title{
-    margin-bottom: 60px;
+    color: var(--color-azul);
+    width: 50%;
+    font-family: var(--font);
+    padding: 0 30px;
 }
 
 .info_title span{
@@ -1676,17 +1682,19 @@ footer{
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
+    flex-direction: row-reverse;
 }
 
 .info_items p:nth-child(1) span{
     font-size: 30px;
-    margin-right: 10px;
+    margin-left: 15px;
+    color: var(--color-blanco);
 }
 
 .info_items p:nth-child(2) span{
-    font-size: 50px;
-    margin-right: 15px;
-    margin-left: 4px;
+    font-size: 40px;
+    margin-left: 15px;
+    color: var(--color-blanco);
 }
 
 
@@ -1707,6 +1715,7 @@ form.form_contact h2{
 form.form_contact .user_info{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 form.form_contact label{
@@ -1734,9 +1743,9 @@ form.form_contact textarea{
     max-height: 90px;
 }
 
-form.form_contact button[type="submit"]{
+form.form_contact input[type="submit"]{
     width: 180px;
-	background: #4091EC;
+	background: var(--color-verde);
 	padding: 10px;
 	border: none;
 	border-radius: 25px;
@@ -1750,8 +1759,8 @@ form.form_contact button[type="submit"]{
 	cursor: pointer;
 }
 
-form.form_contact button[type="submit"]:hover{
-    background: #3371B6;
+form.form_contact input[type="submit"]:hover{
+    background: #14a767
 }
 
 /* Ventana de errores*/
@@ -1814,7 +1823,60 @@ form.form_contact button[type="submit"]:hover{
 	color: #fff;
 	border: 2px solid #B14141;
 	cursor: pointer;
-
 	float: right;
 }
 
+@media screen and (max-width:1024px){
+    .form_wrap{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .cantact_info{
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+    .info_title, .info_items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+    .info_items p{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:600px){
+    .form_wrap{
+        width: 100%;
+        margin: 0;
+    }
+    .form_wrap form{
+        padding: 30px 24px;
+        width: 95%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:530px){
+    .cantact_info::before{
+        background-size: 230% 103%;
+    }
+}
+
+
+/* UBICACION CONSULTORIO */
+.ubicacionTitulo{
+    margin-top: 100px;
+}
+.contenedorUbic{
+    margin-bottom:  100px;
+}
+
+@media screen and (max-width:530px){
+    .embed-responsive-item{
+        height: 35vh;
+    }
+}
